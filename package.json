@@ -4,15 +4,21 @@
   "description": "Sample web project template with NodeJS",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "nodemon node server/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.18"
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
   },
   "keywords": [
     "web",

@@ -1,9 +1,12 @@
-const express = require('express')
+const express = require("express");
 
-const router = new express.Router()
+const router = new express.Router();
 
 // contact routes
-const apiProductRouter = require('./api-contact-router')
-router.use('/api/contact', apiProductRouter)
+const contactRouter = require("./contacts");
+router.use("/api/contacts", contactRouter);
 
-module.exports = router
+const authRoutes = require("./auth");
+router.use("/api/auth", authRoutes);
+
+module.exports = router;
